@@ -85,15 +85,12 @@ public class AircraftController {
 		try {
 			aircraftFacade.updateAircraft(id, aircraftJson);
 			return ResponseEntity.status(HttpStatus.OK).build();
-		} catch (JsonProcessingException e) {
+		} catch (JsonProcessingException | IllegalArgumentException e) {
 			e.printStackTrace();
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
-			return ResponseEntity.status(HttpStatus.NOT_MODIFIED).build();
 		} catch (EntityNotFoundException e) {
 			e.printStackTrace();
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+			return ResponseEntity.status(HttpStatus.NOT_MODIFIED).build();
 		}
 	}
 	

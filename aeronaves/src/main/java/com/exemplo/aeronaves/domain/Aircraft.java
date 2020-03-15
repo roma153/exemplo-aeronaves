@@ -15,9 +15,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonFormat.Shape;
-
 import lombok.Data;
 
 @Data
@@ -45,14 +42,12 @@ public class Aircraft {
 	
 	private boolean sold;
 	
-	@JsonFormat(shape = Shape.STRING, pattern = "dd/MM/yyyy")
 	private Date created;
 	
-	@JsonFormat(shape = Shape.STRING, pattern = "dd/MM/yyyy")
 	private Date updated;
 	
 	/**
-	 * Method updates {@link Aircraft} object through an {@link Aircraft parameter
+	 * Method updates {@link Aircraft} object through an {@link Aircraft} parameter
 	 * 
 	 * @param aircraft is the modified object
 	 */
