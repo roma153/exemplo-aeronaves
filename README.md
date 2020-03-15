@@ -39,7 +39,8 @@ password = admin
 ```
 ### Servidor
 Servidor utilizado para hospedar o projeto em testes foi Apache Tomcat 9, disponível no link:
- [32-bit/64-bit Windows Service Installer](http://mirror.nbtelecom.com.br/apache/tomcat/tomcat-9/v9.0.31/bin/apache-tomcat-9.0.31.exe)
+
+[32-bit/64-bit Windows Service Installer](http://mirror.nbtelecom.com.br/apache/tomcat/tomcat-9/v9.0.31/bin/apache-tomcat-9.0.31.exe)
 
 O projeto manteve a configuração padrão, utilizando a porta 8080.
 
